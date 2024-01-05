@@ -1,3 +1,4 @@
+import styles from '../styles/main.module.css'
 export default function Input({ password, setPassword }) {
 
     const handlePasswordChange = (event) => {
@@ -7,8 +8,8 @@ export default function Input({ password, setPassword }) {
     return (
         <>
 
-            <div className="container">
-                <div className="title">
+            <div  className={styles.container}>
+                <div  className={styles.title}>
                     <h1>senha segura</h1>
                 </div>
 
@@ -16,7 +17,7 @@ export default function Input({ password, setPassword }) {
                     value={password}
                     placeholder="Digite sua senha."
                     onChange={handlePasswordChange}
-                    className="input"
+                    className={styles.input}
                 />
 
                

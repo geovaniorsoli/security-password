@@ -4,6 +4,8 @@ import Input from "../components/Input";
 import { checkPassword } from "../function/password"
 //state
 import { useState, useEffect } from "react";
+//style
+import styles from '../styles/main.module.css'
 
 export default function app() {
 
@@ -16,14 +18,14 @@ export default function app() {
   return (
 
     <>
-    <div className="containerGlobal">
+    <div className={styles.containerGlobal}>
       <Input password={password} setPassword={setPassword} />
 
-        <p className="ResultPassword">Força da Senha: {ResultLevelPassword}</p>
+        <p className={styles.ResultPassword}>Força da Senha: {ResultLevelPassword}</p>
 
 
 
-      <div className="containerStart">
+      <div className={styles.containerStart}>
         <div className="request"> 
         <ul>
           {Object.entries(passwordRequire).map(([key, value]) => (
@@ -37,7 +39,7 @@ export default function app() {
         </div>
       </div>
 
-        <h3 className="subtitle">
+        <h3 className={styles.subtitle}>
           Esse site não possui nada com que possa salvar sua senha, é serio.
         </h3>
       
